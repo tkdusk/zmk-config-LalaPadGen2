@@ -154,6 +154,13 @@
         track-remainders;
     };
 
+    scroll_inverter: scroll_inverter {
+        compatible = "zmk,input-processor-transform";
+        #input-processor-cells = <1>;
+        x-codes = <INPUT_REL_WHEEL>;
+        y-codes = <INPUT_REL_HWHEEL>;
+    };
+
     trackpad_listener_R: trackpad_listener_R {
         compatible = "zmk,input-listener";
         status = "disabled";
@@ -161,6 +168,7 @@
         input-processors = <&trackpad_key_behaviors_R>,
                            <&zip_xy_scaler 1 5>,
                            <&zip_scroll_scaler 1 12>,
+                           <&scroll_inverter INPUT_TRANSFORM_Y_INVERT>,
                            <&zip_dynamic_xy_scaler>,
                            <&zip_dynamic_scroll_scaler>;
         lowspeedmode {
@@ -168,6 +176,7 @@
             input-processors =  <&trackpad_key_behaviors_R>,
                                 <&zip_xy_scaler 1 15>,
                                 <&zip_scroll_scaler 1 40>,
+                                <&scroll_inverter INPUT_TRANSFORM_Y_INVERT>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
         };
@@ -179,6 +188,7 @@
         input-processors = <&trackpad_key_behaviors_L>,
                            <&zip_xy_scaler 1 5>,
                            <&zip_scroll_scaler 1 12>,
+                           <&scroll_inverter INPUT_TRANSFORM_Y_INVERT>,
                            <&zip_dynamic_xy_scaler>,
                            <&zip_dynamic_scroll_scaler>;
         lowspeedmode {
@@ -186,6 +196,7 @@
             input-processors =  <&trackpad_key_behaviors_L>,
                                 <&zip_xy_scaler 1 15>,
                                 <&zip_scroll_scaler 1 40>,
+                                <&scroll_inverter INPUT_TRANSFORM_Y_INVERT>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
         };
