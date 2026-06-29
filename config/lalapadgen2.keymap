@@ -65,7 +65,7 @@
 
         system_layer {
             bindings = <&mo 3>;
-            key-positions = <18 19>;
+            key-positions = <8 9>;
         };
     };
 
@@ -97,7 +97,7 @@
         SECONDARY_LAYER {
             display-name = "secondary_layer";
             bindings = <
-&kp LG(W)  &kp LS(LG(T))   &none           &kp RIGHT_ALT    &enter_pass                  &mt LS(N1) N1           &mt LS(N2) N2    &mt LS(N3) N3            &mt LS(N4) N4      &mt LS(N5) N5
+&kp LG(W)  &kp LS(LG(T))   &none           &kp RIGHT_ALT    &enter_pass                  &mt LS(N1) N1           &mt LS(N2) N2    &mt LS(N3) N3            &mt LS(N4) N4      &mt N5 LS(N5)
 &kp PG_UP  &mkp MB4        &kp UP_ARROW    &mkp MB5         &kp HOME                     &mt LS(N6) N6           &mt LS(N7) N7    &mt LS(N8) N8            &mt LS(N9) N9      &mt LS(N0) N0
 &kp PG_DN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                      &mt LS(SEMI) SEMI       &mt LS(SQT) SQT  &mt LS(RBKT) RBKT        &mt LS(BSLH) BSLH  &mt LS(INT3) INT3
 &trans     &trans          &trans          &trans           &trans       &trans  &trans  &studio_unlock          &trans           &trans                   &trans             &mt LS(LBKT) LBKT
